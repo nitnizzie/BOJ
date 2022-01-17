@@ -5,7 +5,8 @@ if [ $1 ]; then
     else
         echo "create new file on /$1"
         mkdir $1
-        touch $1/$1.cpp
+        #touch $1/$1.cpp
+        cp sample.cpp $1/$1.cpp
     fi
 else
     echo "usage: ./run.sh <num>"
