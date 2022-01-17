@@ -1,12 +1,11 @@
 if [ $1 ]; then
-    if [ -d "$1" ]; then
-        g++ -o $1/$1.out $1/$1.cpp
-        ./$1/$1.out
+    if [ -d "src/$1" ]; then
+        g++ -o src/$1/$1.out src/$1/$1.cpp
+        ./src/$1/$1.out
     else
-        echo "create new file on /$1"
-        mkdir $1
-        #touch $1/$1.cpp
-        cp sample.cpp $1/$1.cpp
+        echo "create new file on src/$1"
+        mkdir src/$1
+        cp sample.cpp src/$1/$1.cpp
     fi
 else
     echo "usage: ./run.sh <num>"
